@@ -1,5 +1,6 @@
 /**
  * PROSPIRA OFFICE — Work & Portfolio Case Studies Module
+ * Updated for https://prospira-agency-iuzt.vercel.app/ color system
  */
 
 const DEMO_PROJECTS = [
@@ -9,7 +10,6 @@ const DEMO_PROJECTS = [
     category: 'web-apps',
     categoryLabel: 'Web Applications & FinTech',
     summary: 'A high-throughput cross-border treasury management platform handling multi-currency ledger settlements and real-time fraud mitigation.',
-    mockupType: 'dashboard',
     tags: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind', 'AWS ECS'],
     client: 'FinTech Demo Partner',
     timeline: '14 Weeks Delivery',
@@ -23,7 +23,6 @@ const DEMO_PROJECTS = [
     category: 'mobile-apps',
     categoryLabel: 'Mobile Applications & AI',
     summary: 'An intelligent preventative biometric tracking app utilizing on-device machine learning models for personalized wellness forecasts.',
-    mockupType: 'mobile',
     tags: ['Flutter', 'iOS Swift', 'Python ML', 'FastAPI', 'HealthKit API'],
     client: 'HealthTech Demo Venture',
     timeline: '12 Weeks Delivery',
@@ -37,7 +36,6 @@ const DEMO_PROJECTS = [
     category: 'game-dev',
     categoryLabel: 'Game Development & WebGL',
     summary: 'A browser-based interactive 3D spatial visualizer and simulator for real-time architectural environments and virtual product exploration.',
-    mockupType: 'canvas',
     tags: ['Three.js', 'WebGL', 'WebGPU', 'TypeScript', 'GLSL Shaders'],
     client: 'Spatial Demo Studio',
     timeline: '10 Weeks Delivery',
@@ -51,7 +49,6 @@ const DEMO_PROJECTS = [
     category: 'ai-automation',
     categoryLabel: 'AI Automation & Agents',
     summary: 'Autonomous AI customer resolution and document routing agents delivering intelligent zero-touch workflows for modern logistics.',
-    mockupType: 'nodes',
     tags: ['Python', 'LangChain', 'FastAPI', 'Redis', 'Docker', 'OpenAI API'],
     client: 'Logistics Demo Corp',
     timeline: '8 Weeks Delivery',
@@ -65,7 +62,6 @@ const DEMO_PROJECTS = [
     category: 'ui-ux',
     categoryLabel: 'UI/UX Design & Research',
     summary: 'An end-to-end design system, accessibility audit, and multi-platform component library for an electric vehicle fleet network.',
-    mockupType: 'design-system',
     tags: ['Figma', 'Design Systems', 'WCAG 2.1 AAA', 'Interactive Prototyping'],
     client: 'CleanTech Demo Group',
     timeline: '9 Weeks Delivery',
@@ -79,7 +75,6 @@ const DEMO_PROJECTS = [
     category: 'web-dev',
     categoryLabel: 'Web Development & Performance',
     summary: 'A sub-second headless digital storefront built for luxury lifestyle brands with international localization and high peak traffic.',
-    mockupType: 'browser',
     tags: ['React', 'Next.js SSG', 'Tailwind CSS', 'Shopify Storefront API', 'Edge CDN'],
     client: 'Retail Demo Brand',
     timeline: '10 Weeks Delivery',
@@ -94,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModals();
 });
 
-// Category Filtering
 function initPortfolioFilters() {
   const filterButtons = document.querySelectorAll('[data-filter]');
   const projectCards = document.querySelectorAll('.project-card[data-category]');
@@ -121,7 +115,6 @@ function initPortfolioFilters() {
   });
 }
 
-// Project Details Modal
 function initProjectModals() {
   const modal = document.getElementById('projectModal');
   if (!modal) return;
@@ -151,9 +144,9 @@ function initProjectModals() {
 
     if (modalImpact) {
       modalImpact.innerHTML = project.impact.map(i => `
-        <div style="background: rgba(23,36,58,0.7); border: 1px solid var(--border-subtle); padding: 1rem; border-radius: var(--radius-sm);">
-          <div style="color: var(--color-orange); font-weight: 700; font-family: var(--font-headline); font-size: 1.1rem; margin-bottom: 0.25rem;">✓ Key Outcome</div>
-          <div style="color: var(--color-warm-white); font-size: 0.9rem;">${i}</div>
+        <div style="background: #FFFFFF; border: 1px solid var(--color-border); padding: 1rem; border-radius: var(--radius-sm);">
+          <div style="color: var(--color-primary); font-weight: 800; font-family: var(--font-headline); font-size: 1.05rem; margin-bottom: 0.25rem;">✓ Key Outcome</div>
+          <div style="color: var(--color-foreground); font-size: 0.9rem;">${i}</div>
         </div>
       `).join('');
     }
@@ -176,11 +169,9 @@ function initProjectModals() {
   });
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
   });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });

@@ -1,5 +1,6 @@
 /**
  * PROSPIRA OFFICE — Core Application & Interactive Behaviors
+ * Color System matching https://prospira-agency-iuzt.vercel.app/
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,11 +17,19 @@ function initHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
+  const isHome = header.classList.contains('home-header');
+
   const onScroll = () => {
     if (window.scrollY > 20) {
       header.classList.add('scrolled');
+      if (isHome) {
+        header.classList.remove('home-header');
+      }
     } else {
       header.classList.remove('scrolled');
+      if (isHome) {
+        header.classList.add('home-header');
+      }
     }
   };
 
@@ -71,7 +80,7 @@ function initMobileNav() {
 
 // 4. Subtle Scroll Reveal Animations
 function initScrollObserver() {
-  const revealElements = document.querySelectorAll('.reveal, .card, .stat-card, .process-item');
+  const revealElements = document.querySelectorAll('.card, .stat-card, .process-item, .project-card');
   if (!('IntersectionObserver' in window)) return;
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -81,7 +90,7 @@ function initScrollObserver() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
   revealElements.forEach(el => observer.observe(el));
 }
@@ -104,8 +113,6 @@ function highlightActiveNav() {
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href').toLowerCase();
-    
-    // Check if on home page
     if ((currentPath === '/' || currentPath.endsWith('index.html') || currentPath === '') && (href === '/' || href === 'index.html' || href === './index.html')) {
       link.classList.add('active');
     } else if (href !== '/' && href !== 'index.html' && currentPath.includes(href.replace('.html', '').replace('./', ''))) {

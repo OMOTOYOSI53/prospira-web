@@ -1,31 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
   <defs>
-    <linearGradient id="pGrad" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F28A24" />
-      <stop offset="60%" stop-color="#FF9D3B" />
-      <stop offset="100%" stop-color="#FFC170" />
+    <linearGradient id="pGradRef" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF5D05" />
+      <stop offset="60%" stop-color="#FF7D2A" />
+      <stop offset="100%" stop-color="#F4D47C" />
     </linearGradient>
-    <linearGradient id="pGlow" x1="10" y1="10" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#F28A24" stop-opacity="0" />
-    </linearGradient>
-    <filter id="shadow" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#F28A24" flood-opacity="0.45" />
+    <filter id="shadowRef" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FF5D05" flood-opacity="0.4" />
     </filter>
   </defs>
   
-  <!-- Outer Dark Badge Canvas -->
-  <rect width="48" height="48" rx="12" fill="#101827" />
-  <rect x="0.5" y="0.5" width="47" height="47" rx="11.5" stroke="#17243A" stroke-width="1" />
+  <!-- Outer Dark Slate Badge -->
+  <rect width="48" height="48" rx="12" fill="#233038" />
+  <rect x="0.5" y="0.5" width="47" height="47" rx="11.5" stroke="#075056" stroke-width="1" />
   
-  <!-- Abstract Geometric P Mark -->
-  <!-- Left Pillar with angled base -->
-  <path d="M12 36L12 12C12 10.8954 12.8954 10 14 10H18C19.1046 10 20 10.8954 20 12V36C20 37.1046 19.1046 38 18 38H14C12.8954 38 12 37.1046 12 36Z" fill="url(#pGrad)" filter="url(#shadow)" />
-  
-  <!-- Dynamic Growth Loop with Apex Arrow Cut -->
-  <path d="M18 10H28C33.5228 10 38 14.4772 38 20C38 25.5228 33.5228 30 28 30H18V23H27C28.6569 23 30 21.6569 30 20C30 18.3431 28.6569 17 27 17H18V10Z" fill="url(#pGrad)" />
-  
-  <!-- Geometric Tech Accent Core (Ascension Arrow Cutout) -->
-  <polygon points="21,13 27,13 25,17 19,17" fill="#FFFFFF" opacity="0.85" />
-  <circle cx="34" cy="14" r="2.5" fill="#F28A24" />
+  <!-- Geometric Abstract P Mark -->
+  <path d="M12 36L12 12C12 10.8954 12.8954 10 14 10H18C19.1046 10 20 10.8954 20 12V36C20 37.1046 19.1046 38 18 38H14C12.8954 38 12 37.1046 12 36Z" fill="url(#pGradRef)" filter="url(#shadowRef)" />
+  <path d="M18 10H28C33.5228 10 38 14.4772 38 20C38 25.5228 33.5228 30 28 30H18V23H27C28.6569 23 30 21.6569 30 20C30 18.3431 28.6569 17 27 17H18V10Z" fill="url(#pGradRef)" />
+  <polygon points="21,13 27,13 25,17 19,17" fill="#FDF6E3" opacity="0.9" />
+  <circle cx="34" cy="14" r="2.5" fill="#F4D47C" />
 </svg>

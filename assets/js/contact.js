@@ -1,5 +1,6 @@
 /**
  * PROSPIRA OFFICE — Contact & Project Brief Submission Engine
+ * Updated for https://prospira-agency-iuzt.vercel.app/ color system
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   prefillFromQuery();
 });
 
-// Pre-fill service from URL param e.g. contact.html?service=web-applications
 function prefillFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
   const requestedService = urlParams.get('service');
@@ -91,7 +91,6 @@ function initContactForm() {
     const service = serviceSelect?.value;
     const message = form.querySelector('[name="message"]')?.value.trim();
 
-    // Client-side validation checks
     if (!name || name.length < 2) {
       alert('Please enter your full name (at least 2 characters).');
       form.querySelector('[name="fullName"]')?.focus();
@@ -123,7 +122,6 @@ function initContactForm() {
       return;
     }
 
-    // Set Loading UI State
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
@@ -134,16 +132,10 @@ function initContactForm() {
       Processing Transmission...
     `;
 
-    /*
-     * BACKEND INTEGRATION NOTE:
-     * To connect with a live service (Formspree, Web3Forms, Resend, or your own API endpoint):
-     * Replace this simulated timeout with fetch('/api/contact', { method: 'POST', body: JSON.stringify(...) })
-     */
     setTimeout(() => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnText;
 
-      // Populate confirmation modal
       const refNumber = 'PO-' + Math.floor(10000 + Math.random() * 90000);
       const confRef = document.getElementById('confRef');
       const confName = document.getElementById('confName');
@@ -163,7 +155,6 @@ function initContactForm() {
     }, 900);
   });
 
-  // Modal dismiss handler
   if (feedbackModal) {
     const closeBtn = feedbackModal.querySelector('.modal-close');
     const actionBtn = feedbackModal.querySelector('.modal-action-close');

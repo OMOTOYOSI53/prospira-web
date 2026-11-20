@@ -1,26 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
-  <rect width="600" height="380" rx="12" fill="#0C1320" />
-  <rect x="0.5" y="0.5" width="599" height="379" rx="11.5" stroke="#1E2D48" />
-  <!-- Header -->
-  <rect width="600" height="36" fill="#141E30" rx="12" />
+  <rect width="600" height="380" rx="12" fill="#233038" />
+  <rect x="0.5" y="0.5" width="599" height="379" rx="11.5" stroke="rgba(255,255,255,0.12)" />
+  <rect width="600" height="36" fill="#1C272E" rx="12" />
   <circle cx="20" cy="18" r="4" fill="#EF4444" />
-  <circle cx="34" cy="18" r="4" fill="#F59E0B" />
+  <circle cx="34" cy="18" r="4" fill="#F4D47C" />
   <circle cx="48" cy="18" r="4" fill="#10B981" />
-  <text x="70" y="22" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">nexuspay.network/treasury/liquidity-engine</text>
-  <!-- Content -->
-  <rect x="24" y="56" width="160" height="70" rx="8" fill="#141E30" stroke="#1E2D48" />
-  <text x="36" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">AVAILABLE LIQUIDITY</text>
+  <text x="70" y="22" font-family="'Inter', sans-serif" font-size="10" fill="#A9B8BC">nexuspay.network/treasury/liquidity-engine</text>
+  
+  <rect x="24" y="56" width="160" height="70" rx="8" fill="#075056" stroke="rgba(255,255,255,0.1)" />
+  <text x="36" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#A9B8BC">AVAILABLE LIQUIDITY</text>
   <text x="36" y="104" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">$48,290,140</text>
-  <rect x="200" y="56" width="160" height="70" rx="8" fill="#141E30" stroke="#1E2D48" />
-  <text x="212" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">24H FX FLOW</text>
-  <text x="212" y="104" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#F28A24">$14.8M</text>
-  <rect x="376" y="56" width="200" height="70" rx="8" fill="#141E30" stroke="#1E2D48" />
-  <text x="388" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">ACTIVE CORRIDORS</text>
+  
+  <rect x="200" y="56" width="160" height="70" rx="8" fill="#075056" stroke="rgba(255,255,255,0.1)" />
+  <text x="212" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#A9B8BC">24H FX FLOW</text>
+  <text x="212" y="104" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#F4D47C">$14.8M</text>
+  
+  <rect x="376" y="56" width="200" height="70" rx="8" fill="#075056" stroke="rgba(255,255,255,0.1)" />
+  <text x="388" y="78" font-family="'Inter', sans-serif" font-size="9" fill="#A9B8BC">ACTIVE CORRIDORS</text>
   <text x="388" y="104" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">38 Jurisdictions</text>
-  <!-- Chart -->
-  <rect x="24" y="142" width="552" height="214" rx="8" fill="#141E30" stroke="#1E2D48" />
+  
+  <rect x="24" y="142" width="552" height="214" rx="8" fill="#1C272E" stroke="rgba(255,255,255,0.08)" />
   <text x="40" y="172" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Cross-Border Settlement Velocity</text>
-  <path d="M40 320 Q120 280 180 230 T320 250 T460 180 T560 200 L560 330 L40 330 Z" fill="rgba(242,138,36,0.12)" />
-  <path d="M40 320 Q120 280 180 230 T320 250 T460 180 T560 200" stroke="#F28A24" stroke-width="2.5" fill="none" />
-  <circle cx="460" cy="180" r="4.5" fill="#FFFFFF" stroke="#F28A24" stroke-width="2" />
+  <path d="M40 320 Q120 280 180 230 T320 250 T460 180 T560 200 L560 330 L40 330 Z" fill="rgba(255,93,5,0.15)" />
+  <path d="M40 320 Q120 280 180 230 T320 250 T460 180 T560 200" stroke="#FF5D05" stroke-width="2.5" fill="none" />
+  <circle cx="460" cy="180" r="4.5" fill="#FDF6E3" stroke="#FF5D05" stroke-width="2" />
 </svg>
