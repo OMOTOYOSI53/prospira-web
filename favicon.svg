@@ -1,22 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="pGradRef" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FF5D05" />
-      <stop offset="60%" stop-color="#FF7D2A" />
-      <stop offset="100%" stop-color="#F4D47C" />
+    <linearGradient id="llGold" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9E7F47" />
+      <stop offset="35%" stop-color="#C5A46D" />
+      <stop offset="70%" stop-color="#E5D1AA" />
+      <stop offset="100%" stop-color="#C5A46D" />
     </linearGradient>
-    <filter id="shadowRef" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FF5D05" flood-opacity="0.4" />
-    </filter>
+    <linearGradient id="llEmerald" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B3D2E" />
+      <stop offset="100%" stop-color="#051C15" />
+    </linearGradient>
   </defs>
   
-  <!-- Outer Dark Slate Badge -->
-  <rect width="48" height="48" rx="12" fill="#233038" />
-  <rect x="0.5" y="0.5" width="47" height="47" rx="11.5" stroke="#075056" stroke-width="1" />
+  <!-- Outer Obsidian Badge -->
+  <rect width="64" height="64" rx="14" fill="#111111" />
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="url(#llGold)" stroke-width="1.2" stroke-opacity="0.6" />
   
-  <!-- Geometric Abstract P Mark -->
-  <path d="M12 36L12 12C12 10.8954 12.8954 10 14 10H18C19.1046 10 20 10.8954 20 12V36C20 37.1046 19.1046 38 18 38H14C12.8954 38 12 37.1046 12 36Z" fill="url(#pGradRef)" filter="url(#shadowRef)" />
-  <path d="M18 10H28C33.5228 10 38 14.4772 38 20C38 25.5228 33.5228 30 28 30H18V23H27C28.6569 23 30 21.6569 30 20C30 18.3431 28.6569 17 27 17H18V10Z" fill="url(#pGradRef)" />
-  <polygon points="21,13 27,13 25,17 19,17" fill="#FDF6E3" opacity="0.9" />
-  <circle cx="34" cy="14" r="2.5" fill="#F4D47C" />
+  <!-- Inner Subtle Emerald Layer -->
+  <rect x="5" y="5" width="54" height="54" rx="10" fill="url(#llEmerald)" fill-opacity="0.75" />
+  
+  <!-- Intertwined Architectural Luxe Living Monogram L & L -->
+  <g stroke="url(#llGold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- First 'L' - Architectural upright & horizontal plinth -->
+    <path d="M22 17V45H39" />
+    <!-- Second 'L' - Offset mirrored & elevated -->
+    <path d="M28 23V39H44" />
+    <!-- Diamond luxury accent -->
+    <polygon points="32,15 35,19 32,23 29,19" fill="url(#llGold)" stroke-width="0.8" />
+  </g>
 </svg>

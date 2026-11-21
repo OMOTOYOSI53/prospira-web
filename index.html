@@ -1,582 +1,991 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROSPIRA OFFICE — We Build Digital Products That Grow Businesses</title>
-  <meta name="description" content="Prospira Office is a premier digital product agency. We transform ideas into powerful digital experiences through technology, creativity, and innovation.">
+  <title>Luxe Living — Haute Furniture &amp; Interior Atelier</title>
+  <meta name="description" content="Luxe Living curates extraordinary luxury furniture, combining timeless European craftsmanship, rich emerald velvets, natural marbles, and contemporary architectural design.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="selection:bg-primary selection:text-white">
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress"></div>
+<body class="bg-obsidian">
 
-  <!-- Navigation Header (Home: starts transparent, becomes glass on scroll) -->
-  <header class="site-header home-header">
-    <div class="container header-container">
-      <a href="index.html" class="brand-link" aria-label="Prospira Office Home">
-        <img src="assets/images/logo.svg" alt="PROSPIRA OFFICE Logo" width="190" height="38">
+  <!-- ========================================================================
+       Global Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Luxe Living Home">
+        <img src="assets/images/logo.svg" alt="Luxe Living Logo" width="220" height="44">
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="process.html" class="nav-link">Process</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
 
-      <!-- Action Button & Mobile Toggle -->
+      <!-- Header Actions -->
       <div class="header-actions">
-        <a href="contact.html" class="btn btn-nav-light btn-sm">
-          Start Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        <button class="cart-toggle-btn" aria-label="View Shopping Bag" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">1</span>
+        </button>
+
+        <button class="btn btn-outline-gold btn-book-consultation" data-service="Showroom Consultation">
+          Book Consultation
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav" role="dialog" aria-modal="true">
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="work.html" class="mobile-nav-link">Work</a></li>
-      <li><a href="process.html" class="mobile-nav-link">Process</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Start Project</a>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="nav-link is-active">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Our Services</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <div style="display:flex; flex-direction:column; gap:16px; width:100%; max-width:280px;">
+      <button class="btn btn-primary btn-book-consultation" data-service="Showroom Consultation">
+        Book Consultation
+      </button>
+      <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20furniture." target="_blank" rel="noopener" class="btn btn-emerald">
+        WhatsApp Concierge
+      </a>
+    </div>
   </div>
 
-  <main>
-    <!-- A. HERO SECTION (Exact Reference: bg-gradient-to-br from-[#233038] to-[#075056]) -->
-    <section class="section section-hero-home">
-      <!-- Ambient Orbs -->
-      <div class="ambient-glow primary" style="top: -10%; left: -10%; width: 50%; height: 50%; opacity: 0.25;"></div>
-      <div class="ambient-glow accent" style="bottom: -10%; right: -10%; width: 50%; height: 50%; opacity: 0.25;"></div>
+  <!-- ========================================================================
+       REVOLUTION SLIDER HERO SECTION
+       Full 100vh Viewport, Ken Burns Zoom, Layered Masked Reveal Transitions
+       ======================================================================== -->
+  <section class="hero-slider-section" aria-label="Cinematic Showcase">
+    <div class="hero-slider-track">
 
-      <div class="container">
-        <div class="grid-2" style="align-items: center; gap: 3.5rem;">
-          <div>
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              Digital Product Agency
-            </div>
-            <h1 style="color: #FFFFFF; margin-bottom: 1.5rem;">
-              We Build Digital <span class="text-gradient-accent">Products That</span> Grow Businesses.
+      <!-- SLIDE 1 -->
+      <div class="hero-slide is-active" data-index="0">
+        <div class="hero-slide-bg kenburns-1" style="background-image: url('assets/images/hero-slide-1.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-content-wrap">
+          <div class="hero-content">
+            <span class="eyebrow hero-eyebrow">The Art of Elegant Living</span>
+            <h1 class="hero-headline">
+              Where Luxury<br><span class="highlight-gold">Meets Living.</span>
             </h1>
-            <p class="lead" style="color: rgba(255, 255, 255, 0.75); margin-bottom: 2.5rem;">
-              We transform ideas into powerful digital experiences through technology, creativity and innovation. Custom websites, scalable applications, and future-forward digital products engineered for ambitious organizations.
+            <p class="hero-description">
+              Discover furniture that transforms your space into an expression of timeless elegance, comfort and style.
             </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
-              <a href="contact.html" class="btn btn-primary btn-lg">
-                Start Your Project
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            <div class="hero-cta-group">
+              <a href="#collections" class="btn btn-primary">
+                Explore Our Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
               </a>
-              <a href="work.html" class="btn btn-secondary-dark btn-lg">
-                Explore Our Work
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+              <a href="about.html" class="btn btn-outline-ivory">
+                Discover Luxe Living
               </a>
             </div>
-            <!-- Trust badges -->
-            <div style="display: flex; gap: 2rem; flex-wrap: wrap; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 1.5rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5D05" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>End-to-end product delivery</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5D05" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Scalable cloud architecture</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5D05" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Human-centered UI/UX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Visual Mockup -->
-          <div style="position: relative;">
-            <div class="ambient-glow accent" style="top: 20%; left: 20%; width: 350px; height: 350px; opacity: 0.25;"></div>
-            <img src="assets/images/mockups/hero-dashboard.svg" alt="Prospira Office Cloud Dashboard Mockup" style="width: 100%; height: auto; border-radius: var(--radius-lg); transform: perspective(1000px) rotateY(-4deg) rotateX(2deg); transition: transform 0.5s ease; box-shadow: 0 25px 60px -15px rgba(7, 80, 86, 0.5);" onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) rotateX(0deg)'" onmouseout="this.style.transform='perspective(1000px) rotateY(-4deg) rotateX(2deg)'">
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- B. INTRODUCTION & STATISTICS SECTION (Exact Reference: bg-[#FDF6E3] rounded-[3rem] p-12) -->
-    <section class="section" style="padding-top: 4rem; padding-bottom: 4rem; background: var(--color-background);">
-      <div class="container">
-        <!-- Stats Card Box -->
-        <div class="stats-box" style="-mt-20">
-          <div class="stats-container">
-            <div class="stat-card">
-              <div class="stat-value">99.4%</div>
-              <div class="stat-label">Client Satisfaction Benchmark*</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value" style="color: var(--color-foreground);">45+</div>
-              <div class="stat-label">Digital Products Delivered*</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value" style="color: var(--color-foreground);">15M+</div>
-              <div class="stat-label">End-User Touchpoints Powered*</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">3.8x</div>
-              <div class="stat-label">Average Revenue Acceleration*</div>
+      <!-- SLIDE 2 -->
+      <div class="hero-slide" data-index="1">
+        <div class="hero-slide-bg kenburns-2" style="background-image: url('assets/images/hero-slide-2.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-content-wrap">
+          <div class="hero-content">
+            <span class="eyebrow hero-eyebrow">Timeless Design. Exceptional Comfort.</span>
+            <h1 class="hero-headline">
+              Make Room<br><span class="highlight-gold">For Beautiful Living.</span>
+            </h1>
+            <p class="hero-description">
+              Thoughtfully designed furniture crafted to bring beauty, sophistication and comfort into every corner of your home.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#furniture" class="btn btn-primary">
+                Shop Furniture
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="about.html" class="btn btn-outline-ivory">
+                Explore Our Story
+              </a>
             </div>
           </div>
-          <p class="stats-disclaimer">
-            *Representative performance benchmarks and project delivery metrics. Editable placeholder figures for organizational verification.
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="hero-slide" data-index="2">
+        <div class="hero-slide-bg kenburns-3" style="background-image: url('assets/images/hero-slide-3.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-content-wrap">
+          <div class="hero-content">
+            <span class="eyebrow hero-eyebrow">Refined Spaces. Elevated Experiences.</span>
+            <h1 class="hero-headline">
+              Your Home.<br><span class="highlight-gold">Your Signature.</span>
+            </h1>
+            <p class="hero-description">
+              Elevate your everyday living with carefully curated furniture and timeless interior inspiration.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#furniture" class="btn btn-primary">
+                View Our Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="contact.html" class="btn btn-outline-ivory">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cinematic Controls & Progress Indicators -->
+    <div class="slider-controls">
+      <div class="container slider-controls-inner">
+        <div class="slider-indicators">
+          <span class="slide-number">01</span>
+          <div class="slider-progress-bar">
+            <div class="slider-progress-fill"></div>
+          </div>
+          <span class="slide-total">/ 03</span>
+        </div>
+
+        <div class="slider-dots">
+          <button class="slider-dot is-active" aria-label="Go to slide 1"></button>
+          <button class="slider-dot" aria-label="Go to slide 2"></button>
+          <button class="slider-dot" aria-label="Go to slide 3"></button>
+        </div>
+
+        <div class="slider-arrows">
+          <button class="slider-arrow-btn slider-prev" aria-label="Previous slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="slider-arrow-btn slider-next" aria-label="Next slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED COLLECTIONS SECTION
+       Living Room, Bedroom, Dining Room, Accent Furniture, Luxury Decor
+       ======================================================================== -->
+  <section class="section bg-obsidian architectural-pattern" id="collections">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto;">
+        <span class="eyebrow eyebrow-center">Curated Assemblages</span>
+        <h2 class="heading-xl">Featured Collections</h2>
+        <p class="body-lead" style="margin-top: 1rem;">
+          Each collection is composed with singular harmony — uniting rich materials, refined silhouettes, and bespoke Italian tailoring.
+        </p>
+      </div>
+
+      <div class="collections-grid">
+        <!-- Living Room (Large) -->
+        <a href="#furniture" class="collection-card collection-card-lg" onclick="document.querySelector('[data-filter=living]').click();">
+          <div class="collection-img-wrap">
+            <img src="assets/images/hero-slide-1.jpg" alt="Living Room Collection" loading="lazy">
+          </div>
+          <div class="collection-overlay"></div>
+          <div class="collection-content">
+            <span class="collection-tag">Signature Category</span>
+            <h3 class="collection-title">Living Room Collection</h3>
+            <p class="collection-desc">Expansive emerald velvet sectionals, sculptural low modular seating, and architectural cocktail tables.</p>
+            <span class="collection-link-text">
+              Explore Living
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Dining Room (Medium) -->
+        <a href="#furniture" class="collection-card collection-card-md" onclick="document.querySelector('[data-filter=dining]').click();">
+          <div class="collection-img-wrap">
+            <img src="assets/images/hero-slide-2.jpg" alt="Dining Room Collection" loading="lazy">
+          </div>
+          <div class="collection-overlay"></div>
+          <div class="collection-content">
+            <span class="collection-tag">Entertaining</span>
+            <h3 class="collection-title">Dining Room</h3>
+            <p class="collection-desc">Honed Calacatta Viola monolithic tables, cast bronze pedestals, and tailored dining armchairs.</p>
+            <span class="collection-link-text">
+              Explore Dining
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Bedroom (Small) -->
+        <a href="#furniture" class="collection-card collection-card-sm" onclick="document.querySelector('[data-filter=bedroom]').click();">
+          <div class="collection-img-wrap">
+            <img src="assets/images/hero-slide-3.jpg" alt="Bedroom Collection" loading="lazy">
+          </div>
+          <div class="collection-overlay"></div>
+          <div class="collection-content">
+            <span class="collection-tag">Private Sanctuary</span>
+            <h3 class="collection-title">Bedroom Suite</h3>
+            <p class="collection-desc">Channel-tufted platform beds, acoustic headboards, and smoked glass nightstands.</p>
+            <span class="collection-link-text">
+              Explore Bedroom
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Accent Furniture (Small) -->
+        <a href="#furniture" class="collection-card collection-card-sm" onclick="document.querySelector('[data-filter=accent]').click();">
+          <div class="collection-img-wrap">
+            <img src="assets/images/showroom-reference.jpg" alt="Accent Furniture Collection" loading="lazy">
+          </div>
+          <div class="collection-overlay"></div>
+          <div class="collection-content">
+            <span class="collection-tag">Sculptural Forms</span>
+            <h3 class="collection-title">Accent Furniture</h3>
+            <p class="collection-desc">Swivel bouclé armchairs, fluted credenzas, and smoked bronze occasional tables.</p>
+            <span class="collection-link-text">
+              Explore Accents
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Luxury Decor & Lighting (Small) -->
+        <a href="#furniture" class="collection-card collection-card-sm" onclick="document.querySelector('[data-filter=decor]').click();">
+          <div class="collection-img-wrap">
+            <img src="assets/images/hero-slide-2.jpg" alt="Luxury Decor & Lighting" loading="lazy">
+          </div>
+          <div class="collection-overlay"></div>
+          <div class="collection-content">
+            <span class="collection-tag">Ambient Glow</span>
+            <h3 class="collection-title">Luxury Decor</h3>
+            <p class="collection-desc">Spanish alabaster chandeliers, hand-blown glass vessels, and artisan brass art pieces.</p>
+            <span class="collection-link-text">
+              Explore Decor
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED FURNITURE (PRODUCT DISPLAY & SHOPPING CART)
+       Interactive filters, product modal details, and quick add-to-cart
+       ======================================================================== -->
+  <section class="section bg-obsidian-soft" id="furniture">
+    <div class="container">
+      <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+        <span class="eyebrow eyebrow-center">Artisanal Masterpieces</span>
+        <h2 class="heading-xl">Featured Furniture</h2>
+        <p class="body-lead" style="margin-top: 1rem;">
+          Handcrafted by master artisans using book-matched marbles, hand-stitched velvets, and precision champagne gold joinery.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-pill is-active" data-filter="all">All Pieces (8)</button>
+        <button class="filter-pill" data-filter="living">Living Room</button>
+        <button class="filter-pill" data-filter="dining">Dining Room</button>
+        <button class="filter-pill" data-filter="bedroom">Bedroom</button>
+        <button class="filter-pill" data-filter="accent">Accents &amp; Chairs</button>
+        <button class="filter-pill" data-filter="decor">Lighting &amp; Decor</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <!-- Product 1: The Aurelia Sectional -->
+        <article class="product-card" data-category="living">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Signature Piece</span>
+            <img src="assets/images/hero-slide-1.jpg" alt="The Aurelia Velvet Sectional" class="product-thumb" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="aurelia-sectional">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Living Room &bull; Modular</span>
+            <h3 class="product-title">The Aurelia Velvet Sectional</h3>
+            <p class="product-desc">Masterfully tailored modular sofa upholstered in plush deep emerald velvet, anchored with a brushed champagne brass plinth.</p>
+            <div class="product-footer">
+              <span class="product-price">$7,850</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="aurelia-sectional">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Sovereign Dining Table -->
+        <article class="product-card" data-category="dining">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Artisanal Made</span>
+            <img src="assets/images/hero-slide-2.jpg" alt="Sovereign Calacatta Marble Dining Table" class="product-thumb" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="sovereign-dining-table">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Dining &bull; Natural Stone</span>
+            <h3 class="product-title">Sovereign Marble Dining Table</h3>
+            <p class="product-desc">Sculptural Calacatta Viola marble monolithic top with chamfered bullnose edge, resting upon twin fluted bronze-wrapped pedestals.</p>
+            <div class="product-footer">
+              <span class="product-price">$6,400</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="sovereign-dining-table">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Elysian Swivel Chair -->
+        <article class="product-card" data-category="accent">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Curated Icon</span>
+            <img src="assets/images/product-chair.jpg" alt="Elysian Swivel Lounge Chair" class="product-thumb" onerror="this.src='assets/images/showroom-reference.jpg'" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="elysian-accent-chair">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Seating &bull; Swivel</span>
+            <h3 class="product-title">Elysian Swivel Lounge Chair</h3>
+            <p class="product-desc">Organic sculptural curve offering enveloping comfort. Features smooth 360-degree silent swivel in champagne gold brushed satin.</p>
+            <div class="product-footer">
+              <span class="product-price">$2,950</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="elysian-accent-chair">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Belvedere Fluted Media Console -->
+        <article class="product-card" data-category="living">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Showroom Featured</span>
+            <img src="assets/images/showroom-reference.jpg" alt="Belvedere Fluted Media Credenza" class="product-thumb" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="belvedere-media-console">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Cabinetry &bull; Fluted Oak</span>
+            <h3 class="product-title">Belvedere Media Credenza</h3>
+            <p class="product-desc">Inspired directly by our flagship showroom interior. Low-profile credenza featuring fluted smoked oak, honed grey marble top, and champagne gold legs.</p>
+            <div class="product-footer">
+              <span class="product-price">$4,200</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="belvedere-media-console">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5: Palazzo Platform Bed -->
+        <article class="product-card" data-category="bedroom">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Bespoke Order</span>
+            <img src="assets/images/hero-slide-3.jpg" alt="Palazzo Channel-Tufted Bed" class="product-thumb" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="palazzo-platform-bed">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Bedroom &bull; Platform</span>
+            <h3 class="product-title">Palazzo Channel-Tufted Bed</h3>
+            <p class="product-desc">A sanctuary of modern luxury. Architectural floor-extended channel-tufted headboard with integrated brushed brass reading sconces.</p>
+            <div class="product-footer">
+              <span class="product-price">$5,600</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="palazzo-platform-bed">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6: Vesper Alabaster Chandelier -->
+        <article class="product-card" data-category="decor">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Limited Edition</span>
+            <img src="assets/images/product-lighting.jpg" alt="Vesper Tiered Alabaster Chandelier" class="product-thumb" onerror="this.src='assets/images/hero-slide-2.jpg'" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="vesper-alabaster-chandelier">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Lighting &bull; Spanish Stone</span>
+            <h3 class="product-title">Vesper Alabaster Chandelier</h3>
+            <p class="product-desc">Naturally veined Spanish alabaster disks suspended in a cascading geometric formation on hand-rubbed champagne gold stems.</p>
+            <div class="product-footer">
+              <span class="product-price">$3,450</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="vesper-alabaster-chandelier">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 7: Nero Marquina Coffee Table -->
+        <article class="product-card" data-category="living">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Natural Stone</span>
+            <img src="assets/images/product-coffee-table.jpg" alt="Bespoke Nero Marquina Coffee Table" class="product-thumb" onerror="this.src='assets/images/showroom-reference.jpg'" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="marquina-coffee-table">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Living Room &bull; Tables</span>
+            <h3 class="product-title">Nero Marquina Coffee Table</h3>
+            <p class="product-desc">Low-profile monolithic silhouette with rounded chamfer corners and soft-touch satin finish that showcases striking natural white veining.</p>
+            <div class="product-footer">
+              <span class="product-price">$3,100</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="marquina-coffee-table">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 8: Verona Sculptural Side Table -->
+        <article class="product-card" data-category="accent">
+          <div class="product-thumb-wrap">
+            <span class="product-badge">Sculptural Art</span>
+            <img src="assets/images/product-side-table.jpg" alt="Verona Occasional Sculptural Table" class="product-thumb" onerror="this.src='assets/images/showroom-reference.jpg'" loading="lazy">
+            <button class="product-quick-view-btn" data-product-id="verona-side-table">
+              View Details
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Accents &bull; Cast Bronze</span>
+            <h3 class="product-title">Verona Occasional Table</h3>
+            <p class="product-desc">An architectural dialogue between cast champagne bronze and smoked tempered glass. Ideal companion for accent seating.</p>
+            <div class="product-footer">
+              <span class="product-price">$1,750</span>
+              <div class="product-actions">
+                <button class="btn-add-cart" data-product-id="verona-side-table">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WHY LUXE LIVING (BRAND VALUES)
+       Timeless Craftsmanship, Exceptional Comfort, Curated Luxury, Personalised Experience
+       ======================================================================== -->
+  <section class="section bg-obsidian">
+    <div class="container">
+      <div class="text-center" style="max-width: 660px; margin: 0 auto;">
+        <span class="eyebrow eyebrow-center">Our Commitment</span>
+        <h2 class="heading-xl">Why Luxe Living</h2>
+        <p class="body-lead" style="margin-top: 1rem;">
+          We curate spaces that elevate the everyday into the extraordinary, guided by four unwavering principles.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Value 1 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="value-title">Timeless Craftsmanship</h3>
+          <p class="value-desc">
+            Furniture designed with quality, detail and lasting elegance. Every frame, stitch, and joint is executed by seasoned artisans who honour heritage joinery traditions.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="value-title">Exceptional Comfort</h3>
+          <p class="value-desc">
+            A balance of refined design and everyday comfort. True luxury must be lived in; our ergonomics support relaxation without compromising geometric precision.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3 class="value-title">Curated Luxury</h3>
+          <p class="value-desc">
+            Carefully selected furniture that elevates modern living. We reject mass production in favour of deliberate limited editions, rare stones, and tactile fabrics.
+          </p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="value-title">Personalised Experience</h3>
+          <p class="value-desc">
+            Helping customers create spaces that reflect their individual style. From custom dimensioning and finish sampling to dedicated interior styling advisory.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- C. TECHNOLOGY & PLATFORM MARQUEE (Exact Reference: border-y border-border) -->
-    <section style="background: var(--color-background); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 2rem 0;">
-      <div class="container" style="text-align: center; margin-bottom: 1rem;">
-        <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-muted-foreground);">
-          Powered by Industry-Leading Technologies
-        </span>
-      </div>
-      <div class="tech-marquee-wrapper">
-        <div class="tech-marquee">
-          <span class="tech-item">REACT</span>
-          <span class="tech-item">NEXT.JS</span>
-          <span class="tech-item">TYPESCRIPT</span>
-          <span class="tech-item">NODE.JS</span>
-          <span class="tech-item">PYTHON</span>
-          <span class="tech-item">FLUTTER</span>
-          <span class="tech-item">TAILWIND CSS</span>
-          <span class="tech-item">POSTGRESQL</span>
-          <span class="tech-item">AWS</span>
-          <span class="tech-item">DOCKER</span>
-          <span class="tech-item">GRAPHQL</span>
-          <span class="tech-item">THREE.JS / WEBGL</span>
-          <span class="tech-item">PYTORCH</span>
-          <!-- Duplicate for seamless loop -->
-          <span class="tech-item">REACT</span>
-          <span class="tech-item">NEXT.JS</span>
-          <span class="tech-item">TYPESCRIPT</span>
-          <span class="tech-item">NODE.JS</span>
-          <span class="tech-item">PYTHON</span>
-          <span class="tech-item">FLUTTER</span>
-          <span class="tech-item">TAILWIND CSS</span>
-          <span class="tech-item">POSTGRESQL</span>
-          <span class="tech-item">AWS</span>
-          <span class="tech-item">DOCKER</span>
-          <span class="tech-item">GRAPHQL</span>
-          <span class="tech-item">THREE.JS / WEBGL</span>
-          <span class="tech-item">PYTORCH</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- D. OUR EXPERTISE (Exact Reference: hover:bg-secondary group-hover:text-white) -->
-    <section class="section" style="background: var(--color-background);">
-      <div class="container">
-        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-          <div>
-            <div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Core Capabilities</div>
-            <h2 class="section-title">Building The Infrastructure<br>Of The Future</h2>
-            <p class="section-subtitle" style="max-width: 600px;">
-              Comprehensive digital product engineering covering every stage of the lifecycle from concept to high-scale operations.
-            </p>
-          </div>
-          <a href="services.html" class="btn btn-secondary">
-            View All Services
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
-        </div>
-
-        <div class="grid-3">
-          <!-- 01. Web Development -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">01</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                </div>
-              </div>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-desc">
-                Modern, high-performance websites built with React, Next.js, and cutting-edge tech stacks designed to establish a powerful online presence.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">Tailwind</span>
-              </div>
-              <a href="services.html#web-development" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 02. Web Applications -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">02</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
-                </div>
-              </div>
-              <h3 class="service-title">Web Applications</h3>
-              <p class="service-desc">
-                Complex SaaS platforms, dashboards, and enterprise applications designed for scale, high throughput, and role-based security.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-              <a href="services.html#web-applications" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 03. Mobile Applications -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">03</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
-                </div>
-              </div>
-              <h3 class="service-title">Mobile Applications</h3>
-              <p class="service-desc">
-                Native-quality mobile experiences for iOS and Android platforms built with Flutter and React Native with offline-first persistence.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Swift</span>
-              </div>
-              <a href="services.html#mobile-applications" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 04. Game Development -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">04</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="12" y2="12"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="15" x2="15.01" y1="13" y2="13"></line><line x1="18" x2="18.01" y1="11" y2="11"></line><rect width="20" height="12" x="2" y="6" rx="6"></rect></svg>
-                </div>
-              </div>
-              <h3 class="service-title">Game Development</h3>
-              <p class="service-desc">
-                Immersive 2D and 3D digital experiences and games for web and mobile platforms with real-time WebGL rendering and shaders.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">Three.js</span>
-                <span class="tech-tag">WebGL</span>
-                <span class="tech-tag">GLSL</span>
-              </div>
-              <a href="services.html#game-development" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 05. AI Automation -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">05</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="m4.93 4.93 2.83 2.83"></path><path d="M2 12h4"></path><path d="m4.93 19.07 2.83-2.83"></path><path d="M12 22v-4"></path><path d="m19.07 19.07-2.83-2.83"></path><path d="M22 12h-4"></path><path d="m19.07 4.93-2.83 2.83"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                </div>
-              </div>
-              <h3 class="service-title">AI Automation</h3>
-              <p class="service-desc">
-                Integrating intelligent AI agents and automation workflows to streamline business operations and eliminate manual bottlenecks.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">LangChain</span>
-                <span class="tech-tag">FastAPI</span>
-              </div>
-              <a href="services.html#ai-automation" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 06. UI/UX Design -->
-          <div class="card service-card">
-            <div>
-              <div class="service-card-top">
-                <span class="service-num">06</span>
-                <div class="service-icon-wrap">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"></path><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="m2 2 7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-                </div>
-              </div>
-              <h3 class="service-title">UI/UX Design</h3>
-              <p class="service-desc">
-                Strategic design that blends aesthetic beauty with world-class user experience, design systems, and conversion-focused interaction.
-              </p>
-            </div>
-            <div>
-              <div class="tech-tags">
-                <span class="tech-tag">Figma</span>
-                <span class="tech-tag">Design Systems</span>
-                <span class="tech-tag">Research</span>
-              </div>
-              <a href="services.html#ui-ux-design" class="card-link">
-                Explore Capability
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- E. FEATURED WORK (DEMONSTRATION PROJECTS) -->
-    <section class="section" style="background: var(--color-background); border-top: 1px solid var(--color-border);">
-      <div class="container">
-        <div class="section-header center">
-          <div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Selected Case Studies</div>
-          <h2 class="section-title">Demonstrated Digital Execution</h2>
-          <p class="section-subtitle">
-            Illustrative showcase highlighting product architecture, interface fidelity, and scalable engineering.
-          </p>
-          <div style="font-size: 0.8rem; color: var(--color-dim); margin-top: 0.5rem;">
-            *Clearly identified demonstration case studies designed to reflect client product standards.
+  <!-- ========================================================================
+       LIFESTYLE EDITORIAL SECTION
+       Asymmetrical editorial layout, authentic showroom photography & quote
+       ======================================================================== -->
+  <section class="section bg-obsidian-soft">
+    <div class="container">
+      <div class="editorial-layout">
+        <!-- Media Column -->
+        <div class="editorial-media">
+          <img src="assets/images/showroom-reference.jpg" alt="Luxe Living Flagship Showroom Interior" class="editorial-main-img">
+          <div class="editorial-floating-badge">
+            <p class="quote">“The essence of refinement lies in spaces that quiet the mind.”</p>
+            <span class="author">Luxe Living Atelier</span>
           </div>
         </div>
 
-        <div class="grid-3">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <div class="project-mockup-wrapper">
-              <img src="assets/images/mockups/fintech-dashboard.svg" alt="NexusPay Enterprise Dashboard Mockup" style="width: 100%; height: auto;">
-            </div>
-            <div class="project-info">
-              <div>
-                <span class="project-badge">Web Applications & FinTech</span>
-                <h3 class="project-title">NexusPay Enterprise</h3>
-                <p class="project-summary">
-                  Multi-currency treasury platform with real-time settlement rails and automated liquidity management.
-                </p>
-              </div>
-              <div>
-                <div class="tech-tags" style="margin-bottom: 1.25rem;">
-                  <span class="tech-tag">Next.js</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                </div>
-                <a href="work.html" class="card-link">
-                  View Case Study
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card">
-            <div class="project-mockup-wrapper">
-              <img src="assets/images/mockups/health-mobile.svg" alt="Aura Health AI Mobile App Mockup" style="width: 100%; height: auto;">
-            </div>
-            <div class="project-info">
-              <div>
-                <span class="project-badge">Mobile Apps & HealthTech</span>
-                <h3 class="project-title">Aura Health AI</h3>
-                <p class="project-summary">
-                  Biometric intelligence and preventative wellness forecast application with edge-computed ML models.
-                </p>
-              </div>
-              <div>
-                <div class="tech-tags" style="margin-bottom: 1.25rem;">
-                  <span class="tech-tag">Flutter</span>
-                  <span class="tech-tag">iOS Swift</span>
-                  <span class="tech-tag">FastAPI</span>
-                </div>
-                <a href="work.html" class="card-link">
-                  View Case Study
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card">
-            <div class="project-mockup-wrapper">
-              <img src="assets/images/mockups/engine-3d.svg" alt="Chronos 3D Spatial Engine Mockup" style="width: 100%; height: auto;">
-            </div>
-            <div class="project-info">
-              <div>
-                <span class="project-badge">Game Dev & WebGL</span>
-                <h3 class="project-title">Chronos 3D Engine</h3>
-                <p class="project-summary">
-                  Browser-based interactive spatial visualizer and simulator running physically based rendering shaders at 60 FPS.
-                </p>
-              </div>
-              <div>
-                <div class="tech-tags" style="margin-bottom: 1.25rem;">
-                  <span class="tech-tag">Three.js</span>
-                  <span class="tech-tag">WebGL</span>
-                  <span class="tech-tag">GLSL</span>
-                </div>
-                <a href="work.html" class="card-link">
-                  View Case Study
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 3.5rem;">
-          <a href="work.html" class="btn btn-secondary btn-lg">
-            Browse All Case Studies & Filter by Category
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- F. CALL TO ACTION SECTION (Exact Reference: bg-secondary text-white) -->
-    <section class="section" style="background: var(--color-background); padding-top: 2rem;">
-      <div class="container">
-        <div class="cta-box">
-          <div class="eyebrow" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--color-accent);"><span class="eyebrow-dot"></span> Next Steps</div>
-          <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Ready to Build Something <br> Exceptional?
+        <!-- Editorial Copy Column -->
+        <div class="editorial-content">
+          <span class="eyebrow">Atmospheric Design</span>
+          <h2 class="editorial-quote-headline">
+            “Luxury is not just how your home looks. It is how it makes you feel.”
           </h2>
-          <p class="lead" style="max-width: 640px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">
-            We help visionary companies design and develop premium digital products. Whether you're a startup or an enterprise, we bring your ideas to life.
+          <p class="body-lead" style="margin-bottom: 1.5rem;">
+            When you enter a room shaped by Luxe Living, the atmosphere changes. Light reflects off honed Italian marble surfaces, rich emerald velvets absorb sound into intimate softness, and sculpted bronze fixtures cast an alluring, warm glow.
           </p>
-          <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <a href="contact.html" class="btn btn-primary btn-lg">
-              Start Project
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          <p style="color: var(--color-taupe-light); line-height: 1.8; margin-bottom: 2.5rem;">
+            Our designs honour the intimate choreography between human scale and monumental architectural beauty. Explore our heritage and see how our philosophy transforms private residences across the globe.
+          </p>
+          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+            <a href="about.html" class="btn btn-primary">
+              Discover Our Philosophy
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
-            <a href="process.html" class="btn btn-secondary-dark btn-lg">
-              Our Process
+            <a href="services.html" class="btn btn-outline-gold">
+              Explore Our Services
             </a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- G. FOOTER (Exact Reference: bg-[#233038] text-white py-20 px-6 border-t border-white/5) -->
+  <!-- ========================================================================
+       CALL TO ACTION SECTION
+       "Let Your Space Tell Your Story."
+       ======================================================================== -->
+  <section class="section grand-cta-section">
+    <div class="container">
+      <div class="grand-cta-content">
+        <span class="eyebrow eyebrow-center">Begin Your Transformation</span>
+        <h2 class="grand-cta-title">Let Your Space Tell Your Story.</h2>
+        <p class="body-lead" style="margin-bottom: 2.5rem;">
+          Whether you are furnishing an expansive modern residence or seeking a singular signature piece, our design curators and private client atelier are at your service.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#collections" class="btn btn-primary">Explore Our Collection</a>
+          <button class="btn btn-outline-ivory btn-book-consultation" data-service="Interior Styling &amp; Spatial Planning">
+            Consult Our Designers
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       Obsidian black background, warm ivory typography, champagne gold accents
+       ======================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="brand-link">
-            <img src="assets/images/logo.svg" alt="PROSPIRA OFFICE Logo" width="190" height="38">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Luxe Living">
+            <img src="assets/images/logo.svg" alt="Luxe Living Logo" width="200" height="40">
           </a>
-          <p>
-            A premium digital agency specializing in high-performance websites, applications, and future-forward digital products.
+          <p class="footer-brand-desc">
+            Luxe Living is an international luxury furniture house and interior atelier dedicated to the art of timeless, sophisticated, and comfortable living.
           </p>
-          <div style="display: flex; gap: 0.5rem;">
-            <span class="tech-tag" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: var(--color-accent);">Innovation</span>
-            <span class="tech-tag" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: var(--color-accent);">Precision</span>
-            <span class="tech-tag" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: var(--color-accent);">Velocity</span>
+          <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 8px; color: var(--color-gold); font-size: 0.8125rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Flagship Atelier &bull; 740 Madison Avenue, New York</span>
           </div>
         </div>
 
+        <!-- Col 2: Navigation Links -->
         <div>
-          <h4 class="footer-heading">Services</h4>
+          <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="services.html#web-development">Web Development</a></li>
-            <li><a href="services.html#web-applications">Web Applications</a></li>
-            <li><a href="services.html#mobile-applications">Mobile Applications</a></li>
-            <li><a href="services.html#game-development">Game Development</a></li>
-            <li><a href="services.html#ai-automation">AI Automation</a></li>
-            <li><a href="services.html#ui-ux-design">UI/UX Design</a></li>
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Collections -->
         <div>
-          <h4 class="footer-heading">Company</h4>
+          <h4 class="footer-col-title">Collections</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="work.html">Work & Portfolio</a></li>
-            <li><a href="process.html">Our Process</a></li>
-            <li><a href="about.html">About Prospira</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html#collections" class="footer-link">Living Room</a></li>
+            <li><a href="index.html#collections" class="footer-link">Dining Room</a></li>
+            <li><a href="index.html#collections" class="footer-link">Bedroom Suites</a></li>
+            <li><a href="index.html#collections" class="footer-link">Accent Seating</a></li>
+            <li><a href="index.html#collections" class="footer-link">Sculptural Lighting</a></li>
           </ul>
         </div>
 
+        <!-- Col 4: Newsletter & Concierge -->
         <div>
-          <h4 class="footer-heading">Inquiries & Office</h4>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Official Inquiries</div>
-              <a href="mailto:inquiries@prospiraoffice.com" style="color: #FFFFFF; text-decoration: none;">inquiries@prospiraoffice.com</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Phone (Placeholder)</div>
-              <span style="color: #FFFFFF;">+1 (800) 555-0199</span>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Studio Location</div>
-              <span style="color: #FFFFFF;">Prospira Office HQ, Suite 400 (Editable)</span>
-            </div>
+          <h4 class="footer-col-title">Private Circle</h4>
+          <p style="font-size: 0.8125rem; color: var(--color-taupe-light); line-height: 1.6;">
+            Subscribe to receive private invitations to new collection previews, architectural lookbooks, and design events.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">
+              Join
+            </button>
+          </form>
+          <div style="margin-top: 1.5rem;">
+            <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%2C%20I%20would%20like%20to%20connect%20with%20your%20concierge." target="_blank" rel="noopener" class="btn-link-gold">
+              <span>Direct WhatsApp Concierge</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
-          © 2026 PROSPIRA OFFICE. All rights reserved. Built with precision and innovation.
+          &copy; <span id="currentYear">2026</span> Luxe Living Atelier Ltd. All rights reserved. Craftsmanship and designs registered internationally.
         </div>
-        <button class="back-to-top" aria-label="Scroll back to top">
-          Back to Top
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
-        </button>
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+              <circle cx="12" cy="12" r="8"></circle>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- ========================================================================
+       SHOPPING CART DRAWER
+       Slide-out drawer with real-time items, qty adjusters, and checkout notice
+       ======================================================================== -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Curated Bag</h3>
+      <button class="cart-close-btn" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-body">
+      <div class="cart-items-list">
+        <!-- Rendered dynamically by LuxeState.cart -->
+      </div>
+      <div class="cart-empty-state" style="display: none;">
+        <svg class="cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+        </svg>
+        <p style="color: var(--color-taupe-light);">Your shopping bag is currently empty.</p>
+        <a href="#furniture" class="btn btn-outline-gold" style="margin-top: 1rem;" onclick="document.querySelector('.cart-close-btn').click();">
+          Browse Furniture
+        </a>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div style="background-color: var(--color-emerald-subtle); border: 1px solid rgba(197, 164, 109, 0.25); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; font-size: 0.75rem; color: var(--color-gold); display: flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="1" y="3" width="15" height="13"></rect>
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+          <circle cx="5.5" cy="18.5" r="2.5"></circle>
+          <circle cx="18.5" cy="18.5" r="2.5"></circle>
+        </svg>
+        <span>Complimentary White-Glove Installation Included</span>
+      </div>
+
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-val">$7,850</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Total</span>
+        <span class="cart-total-val text-gold">$7,850</span>
+      </div>
+
+      <button class="btn btn-primary cart-checkout-btn" style="width: 100%;">
+        Proceed to Concierge Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MODAL: PRODUCT QUICK VIEW
+       ======================================================================== -->
+  <div class="modal-backdrop" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="quickview-layout">
+        <div class="quickview-gallery">
+          <img src="assets/images/hero-slide-1.jpg" alt="Product Image" class="quickview-img">
+        </div>
+        <div class="quickview-details">
+          <span class="eyebrow quickview-category">LIVING ROOM</span>
+          <h3 class="heading-md quickview-title" id="modalProductTitle">The Aurelia Velvet Sectional</h3>
+          <div class="quickview-price text-gold" style="font-size: 1.5rem; font-weight: 600; margin: 8px 0 16px;">$7,850</div>
+          <p class="quickview-desc" style="color: var(--color-taupe-light); line-height: 1.7; margin-bottom: 20px; font-size: 0.9rem;">
+            Masterfully tailored modular sofa upholstered in plush deep emerald velvet, anchored with a brushed champagne brass plinth.
+          </p>
+
+          <div style="margin-bottom: 16px;">
+            <div class="swatches-title">Select Finish / Fabric: <span class="selected-finish-name" style="color: var(--color-ivory);">Deep Emerald Velvet</span></div>
+            <div class="swatches-list quickview-swatches">
+              <!-- Swatches populated by JS -->
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 16px; margin-bottom: 24px; font-size: 0.8125rem;">
+            <div style="margin-bottom: 6px;"><strong>Dimensions:</strong> <span class="quickview-dimensions" style="color: var(--color-taupe-light);">W 340cm x D 195cm x H 78cm</span></div>
+            <div><strong>Materials:</strong> <span class="quickview-materials" style="color: var(--color-taupe-light);">Hand-stretched Italian velvet, European beechwood frame</span></div>
+          </div>
+
+          <button class="btn btn-primary quickview-add-cart-btn" style="width: 100%;">
+            Add to Bag
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL: VIP CONSULTATION BOOKING
+       ======================================================================== -->
+  <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalBookingTitle">
+    <div class="modal-dialog" style="max-width: 600px; padding: 40px;">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <span class="eyebrow">Private Client Services</span>
+      <h3 class="heading-md" id="modalBookingTitle" style="margin-bottom: 10px;">Reserve a VIP Consultation</h3>
+      <p style="color: var(--color-taupe-light); font-size: 0.875rem; margin-bottom: 24px;">
+        Meet with a senior interior styling advisor in our Madison Avenue atelier or via high-definition virtual studio.
+      </p>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label class="form-label" for="bookingName">Your Name</label>
+          <input type="text" id="bookingName" class="form-input" required placeholder="Lady Eleanor Vance">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="bookingEmail">Email Address</label>
+            <input type="email" id="bookingEmail" class="form-input" required placeholder="eleanor@estate.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookingPhone">Phone Number</label>
+            <input type="tel" id="bookingPhone" class="form-input" required placeholder="+1 (212) 555-0199">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="bookingService">Service Desired</label>
+            <select id="bookingService" class="form-select">
+              <option value="Showroom Consultation">Flagship Showroom VIP Tour</option>
+              <option value="Custom Furniture">Bespoke Furniture Customisation</option>
+              <option value="Interior Styling">Interior Styling &amp; Spatial Flow</option>
+              <option value="Virtual Consultation">Virtual Design Studio Session</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookingDate">Preferred Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="bookingNotes">Project Scope or Residence Details (Optional)</label>
+          <textarea id="bookingNotes" class="form-textarea" style="min-height: 80px;" placeholder="Penthouse living area, modern dining suite, custom velvet upholstery..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL: CHECKOUT INTEGRATION ARCHITECTURE NOTICE
+       Transparent disclosure of external checkout pipelines (Stripe/Shopify)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="modalCheckoutTitle">
+    <div class="modal-dialog" style="max-width: 620px; padding: 40px;">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div style="width: 52px; height: 52px; border-radius: 50%; background-color: var(--color-emerald-subtle); border: 1px solid var(--color-gold); display: flex; align-items: center; justify-content: center; color: var(--color-gold); margin-bottom: 20px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      </div>
+
+      <span class="eyebrow">Concierge Checkout Gateway</span>
+      <h3 class="heading-md" id="modalCheckoutTitle" style="margin-bottom: 12px;">White-Glove Order Processing</h3>
+      <p style="color: var(--color-taupe-light); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px;">
+        You have selected <strong class="checkout-items-count" style="color: var(--color-ivory);">1 piece</strong> totalling <strong class="checkout-total text-gold">$7,850</strong>. Due to the bespoke artisanal nature of our furniture and international freight scheduling, every purchase undergoes white-glove concierge verification.
+      </p>
+
+      <div style="background-color: rgba(255, 255, 255, 0.04); border-left: 3px solid var(--color-gold); padding: 16px 20px; border-radius: 2px; margin-bottom: 24px; font-size: 0.8125rem; color: var(--color-ivory-muted); line-height: 1.6;">
+        <strong>Integration Architecture Ready:</strong> This platform is pre-configured to connect directly to <em>Stripe Payment Elements, Shopify Plus Storefront API,</em> or an ERP private invoicing gateway.
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="showToast('Your order brief has been dispatched to our senior client concierge.'); closeModal(document.querySelector('#checkoutModal'));" style="flex: 1;">
+          Confirm Concierge Order
+        </button>
+        <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%2C%20I%20am%20ready%20to%20proceed%20with%20my%20furniture%20order." target="_blank" rel="noopener" class="btn btn-emerald" style="display: inline-flex; align-items: center; gap: 8px;">
+          WhatsApp Concierge
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation Helpers -->
+  <button class="back-to-top" aria-label="Back to top of page" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%20Atelier%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20furniture%20collections." target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp" title="Chat with our Concierge">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>

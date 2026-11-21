@@ -1,13 +1,17 @@
 {
-  "name": "prospira-office",
+  "name": "luxe-living",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Luxe Living — Haute Luxury Furniture & Interior Atelier",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx serve ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "keywords": [
+    "luxury-furniture",
+    "interior-design",
+    "atelier",
+    "luxe-living"
+  ],
+  "author": "Luxe Living Atelier",
+  "license": "ISC"
 }

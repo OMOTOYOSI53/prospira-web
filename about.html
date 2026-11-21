@@ -1,313 +1,479 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us — PROSPIRA OFFICE</title>
-  <meta name="description" content="Learn about Prospira Office: our mission, vision, core values, and approach to digital innovation. A digital product agency dedicated to building products that grow businesses.">
+  <title>About Us — Luxe Living | The Art of Living</title>
+  <meta name="description" content="Discover the story, philosophy, and artisanal craftsmanship behind Luxe Living. Designed for the Art of Living.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="selection:bg-primary selection:text-white">
-  <div class="scroll-progress"></div>
+<body class="bg-obsidian">
 
-  <!-- Header (Glass) -->
-  <header class="site-header glass">
-    <div class="container header-container">
-      <a href="index.html" class="brand-link" aria-label="Prospira Office Home">
-        <img src="assets/images/logo.svg" alt="PROSPIRA OFFICE Logo" width="190" height="38">
+  <!-- ========================================================================
+       Global Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Luxe Living Home">
+        <img src="assets/images/logo.svg" alt="Luxe Living Logo" width="220" height="44">
       </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="process.html" class="nav-link">Process</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link is-active">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
+
+      <!-- Header Actions -->
       <div class="header-actions">
-        <a href="contact.html" class="btn btn-primary btn-sm">
-          Start Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        <button class="cart-toggle-btn" aria-label="View Shopping Bag" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">1</span>
+        </button>
+
+        <button class="btn btn-outline-gold btn-book-consultation" data-service="Atelier Private Tour">
+          Book Consultation
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav" role="dialog" aria-modal="true">
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="work.html" class="mobile-nav-link">Work</a></li>
-      <li><a href="process.html" class="mobile-nav-link">Process</a></li>
-      <li><a href="about.html" class="mobile-nav-link active">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Start Project</a>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link is-active">About Us</a>
+      <a href="services.html" class="nav-link">Our Services</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <div style="display:flex; flex-direction:column; gap:16px; width:100%; max-width:280px;">
+      <button class="btn btn-primary btn-book-consultation" data-service="Atelier Private Tour">
+        Book Consultation
+      </button>
+      <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20story." target="_blank" rel="noopener" class="btn btn-emerald">
+        WhatsApp Concierge
+      </a>
+    </div>
   </div>
 
-  <main>
-    <!-- About Hero -->
-    <section class="section section-hero-inner">
-      <div class="container">
-        <div style="max-width: 860px;">
-          <div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Our Philosophy</div>
-          <h1 style="margin-bottom: 1.5rem;">
-            More Than Code. <br><span class="text-primary">We Build Scalable Futures</span>
-          </h1>
-          <p class="lead">
-            We are a digital product agency founded on the principle that digital tools should not simply look impressive — they must generate measurable business momentum, operational clarity, and durable competitive advantage.
+  <!-- ========================================================================
+       PAGE HERO — Editorial Splendor
+       ======================================================================== -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 4rem); padding-bottom: 4rem; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(ellipse at 50% 20%, rgba(11, 61, 46, 0.4) 0%, rgba(17, 17, 17, 0.95) 75%); z-index: 1;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 860px;">
+      <span class="eyebrow eyebrow-center">Our Heritage &amp; Ethos</span>
+      <h1 class="heading-display" style="margin-bottom: 1.5rem;">
+        Designed for the<br><span class="highlight-gold" style="color: var(--color-gold); font-style: italic;">Art of Living.</span>
+      </h1>
+      <p class="body-lead" style="font-size: 1.25rem; max-width: 720px; margin: 0 auto;">
+        At Luxe Living, we believe furniture is more than what fills a room — it is what shapes the way we experience home.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED EDITORIAL HERO IMAGE
+       ======================================================================== -->
+  <section class="container" style="margin-bottom: 5rem;">
+    <div style="position: relative; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid rgba(197, 164, 109, 0.3); aspect-ratio: 21 / 9; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);">
+      <img src="assets/images/hero-slide-1.jpg" alt="Luxe Living Curated Interior Sanctuary" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 17, 17, 0.6) 0%, transparent 60%);"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       THE BRAND STORY SECTION
+       ======================================================================== -->
+  <section class="section bg-obsidian-soft" style="border-top: 1px solid rgba(197, 164, 109, 0.15); border-bottom: 1px solid rgba(197, 164, 109, 0.15);">
+    <div class="container container-editorial">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="eyebrow eyebrow-center">The Narrative</span>
+        <h2 class="heading-xl">Our Story</h2>
+      </div>
+
+      <div style="background-color: var(--color-obsidian-card); border: 1px solid rgba(197, 164, 109, 0.2); padding: clamp(2rem, 5vw, 4rem); border-radius: var(--radius-sm); position: relative;">
+        <div style="position: absolute; top: 0; left: clamp(2rem, 5vw, 4rem); width: 60px; height: 3px; background-color: var(--color-gold);"></div>
+        <p style="font-family: var(--font-serif); font-size: clamp(1.35rem, 2.2vw, 1.85rem); line-height: 1.6; color: var(--color-ivory); margin-bottom: 2rem; font-style: italic;">
+          “At Luxe Living, we believe furniture is more than what fills a room — it is what shapes the way we experience home. Our passion for refined design, timeless elegance and exceptional comfort inspires us to curate furniture that transforms ordinary spaces into extraordinary living experiences.”
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--color-taupe-light); margin-bottom: 1.5rem;">
+          From the foundational silhouette of an emerald velvet sectional to the cool tactile presence of book-matched Italian marble, our creative direction is anchored in purposeful luxury. Every collection we curate is conceived as an architectural dialogue — balancing generous comfort, honest materials, and timeless proportions.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--color-taupe-light);">
+          Rather than chasing ephemeral trends, Luxe Living champions enduring aesthetics. We view each piece as a permanent fixture of personal expression, crafted to accompany families and private residences across generations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PHILOSOPHY, VISION & MISSION
+       ======================================================================== -->
+  <section class="section bg-obsidian">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 4rem;">
+        <span class="eyebrow eyebrow-center">Foundational Pillars</span>
+        <h2 class="heading-xl">Philosophy, Vision &amp; Mission</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Card 1: Philosophy -->
+        <div class="value-card" style="padding: 44px 36px;">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="value-title">Our Philosophy</h3>
+          <p class="value-desc" style="font-size: 0.9375rem;">
+            Form, materiality, and emotional resonance must exist in perfect equilibrium. Luxury is not defined by excess, but by the quiet certainty of supreme materials, thoughtful restraint, and flawless execution.
+          </p>
+        </div>
+
+        <!-- Card 2: Vision -->
+        <div class="value-card" style="padding: 44px 36px;">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="value-title">Our Vision</h3>
+          <p class="value-desc" style="font-size: 0.9375rem;">
+            To be recognized globally as the pre-eminent house of contemporary luxury living, setting the benchmark for spaces that nurture tranquility, connection, and elevated everyday living.
+          </p>
+        </div>
+
+        <!-- Card 3: Mission -->
+        <div class="value-card" style="padding: 44px 36px;">
+          <div class="value-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <h3 class="value-title">Our Mission</h3>
+          <p class="value-desc" style="font-size: 0.9375rem;">
+            To craft and curate world-class furniture of exceptional pedigree, delivering tailored interior guidance and white-glove services that empower discerning homeowners to realize their spatial vision.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Foundational Thesis Quote (Exact Reference: bg-secondary text-white) -->
-    <section class="section" style="padding-top: 0; padding-bottom: 4rem; background: var(--color-background);">
-      <div class="container">
-        <div style="background: var(--color-secondary); color: #FFFFFF; border-radius: var(--radius-xl); padding: clamp(2rem, 5vw, 3.5rem); box-shadow: 0 20px 40px -15px rgba(7, 80, 86, 0.4); position: relative; overflow: hidden;">
-          <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 1rem;">
-            Our Foundational Thesis
-          </div>
-          <blockquote style="font-family: var(--font-headline); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 800; color: #FFFFFF; line-height: 1.35; margin-bottom: 1.5rem;">
-            “At Prospira Office, we believe that great digital products are built at the intersection of creativity, technology and business strategy.”
-          </blockquote>
-          <p style="color: rgba(255, 255, 255, 0.8); font-size: 1rem; max-width: 780px; margin-bottom: 0;">
-            This synthesis guides every architecture decision we draft, every user experience interaction we animate, and every line of production code we deploy.
+  <!-- ========================================================================
+       QUALITY, CRAFTSMANSHIP & NOBLE MATERIALS
+       ======================================================================== -->
+  <section class="section bg-obsidian-soft">
+    <div class="container">
+      <div class="service-row">
+        <!-- Craftsmanship Text -->
+        <div>
+          <span class="eyebrow">Noble Materials &amp; Discipline</span>
+          <h2 class="heading-xl" style="margin-bottom: 1.5rem;">Artisanal Quality Without Compromise</h2>
+          <p class="body-lead" style="margin-bottom: 1.5rem;">
+            Every Luxe Living creation begins with rare, honest raw materials selected for their longevity, tactile beauty, and character.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission & Vision -->
-    <section class="section" style="padding-top: 0; padding-bottom: 5rem; background: var(--color-background);">
-      <div class="container">
-        <div class="grid-2" style="gap: 2.5rem;">
-          <div class="card" style="background: #FFFFFF;">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(7,80,86,0.08); display: flex; align-items: center; justify-content: center; color: var(--color-secondary); margin-bottom: 1.5rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          
+          <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 2rem;">
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-gold-light); color: var(--color-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700;">1</div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--color-ivory); margin-bottom: 4px;">Natural Italian &amp; Spanish Marbles</h4>
+                <p style="font-size: 0.875rem; color: var(--color-taupe-light);">Hand-selected slabs of Calacatta Viola and Nero Marquina, sealed with matte protective treatments to preserve organic veining.</p>
+              </div>
             </div>
-            <h2 style="font-size: 1.85rem; margin-bottom: 1rem;">Our Mission</h2>
-            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-muted-foreground);">
-              To transform complex business challenges into powerful digital experiences through technology, creativity and innovation. We empower ambitious organizations with digital products that simplify operations, captivate users, and generate enduring commercial value.
-            </p>
-          </div>
 
-          <div class="card" style="background: #FFFFFF;">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(7,80,86,0.08); display: flex; align-items: center; justify-content: center; color: var(--color-secondary); margin-bottom: 1.5rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-gold-light); color: var(--color-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700;">2</div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--color-ivory); margin-bottom: 4px;">Custom Loomed Velvets &amp; Bouclés</h4>
+                <p style="font-size: 0.875rem; color: var(--color-taupe-light);">Rich emerald and charcoal textiles loomed with double-pile density for an incomparable velvety hand and lasting resilience.</p>
+              </div>
             </div>
-            <h2 style="font-size: 1.85rem; margin-bottom: 1rem;">Our Vision</h2>
-            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-muted-foreground);">
-              To be the digital product agency of choice for ambitious enterprises worldwide — recognized for uncompromising engineering discipline, human-centric interface design, and predictable, velocity-driven delivery standards.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Core Values -->
-    <section class="section" style="background: var(--color-background); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container">
-        <div class="section-header center">
-          <div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Guiding Principles</div>
-          <h2 class="section-title">Our Core Values</h2>
-          <p class="section-subtitle">
-            The values that define how we collaborate with clients, treat our engineering craft, and hold ourselves accountable.
-          </p>
-        </div>
-
-        <div class="grid-3" style="gap: 2rem;">
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">01. Innovative Exploration</div>
-            <p style="font-size: 0.95rem;">
-              We continuously investigate modern breakthroughs — from AI pipelines to WebGPU rendering — evaluating how emerging technologies can create real business leverage.
-            </p>
-          </div>
-
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">02. Engineering Precision</div>
-            <p style="font-size: 0.95rem;">
-              We write clean, modular, typed code. We implement automated testing, robust error handling, and strict architecture boundaries to guarantee high-load stability.
-            </p>
-          </div>
-
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">03. Radical Transparency</div>
-            <p style="font-size: 0.95rem;">
-              We provide direct visibility into sprint boards, staging environments, and technical decisions. We believe honest communication fosters long-term trust.
-            </p>
-          </div>
-
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">04. User-First Craftsmanship</div>
-            <p style="font-size: 0.95rem;">
-              Technology serves people. We obsess over micro-interactions, layout ergonomics, accessibility standards, and reducing cognitive overhead for the end user.
-            </p>
-          </div>
-
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">05. Long-Term Impact</div>
-            <p style="font-size: 0.95rem;">
-              We build assets that compound over time. Our goal is to forge sustained product partnerships that help clients outgrow their competition across multiple fiscal quarters.
-            </p>
-          </div>
-
-          <div class="card" style="background: #FFFFFF;">
-            <div style="font-family: var(--font-headline); font-size: 1.25rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">06. Professional Rigor</div>
-            <p style="font-size: 0.95rem;">
-              We adhere strictly to verified delivery timelines, agreed scopes of work, and strict IP confidentiality, providing the enterprise governance our clients expect.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Approach to Digital Innovation -->
-    <section class="section" style="background: var(--color-background);">
-      <div class="container">
-        <div class="grid-2" style="align-items: center; gap: 3.5rem;">
-          <div>
-            <div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> The Prospira Difference</div>
-            <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem;">Our Approach to Digital Innovation</h2>
-            <p style="margin-bottom: 1.25rem;">
-              In an industry frequently crowded with buzzwords and bloated teams, Prospira Office operates as an agile, high-density product partner. We pair deep strategic acumen with hands-on technical execution.
-            </p>
-            <p style="margin-bottom: 1.75rem;">
-              We do not treat engineering as an assembly line. Every product is assigned senior technical leads who take holistic ownership of security, scalability, and aesthetic fidelity.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <span class="tech-tag" style="padding: 0.5rem 1rem;">Direct Senior Engineering</span>
-              <span class="tech-tag" style="padding: 0.5rem 1rem;">Transparent Agile Sprints</span>
-              <span class="tech-tag" style="padding: 0.5rem 1rem;">Zero Black Boxes</span>
-            </div>
-          </div>
-
-          <div>
-            <div class="card" style="padding: 2.5rem; background: var(--color-dark-slate); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1);">
-              <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem; color: #FFFFFF;">Agency Governance & Information</h3>
-              <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.65); margin-bottom: 1.5rem;">
-                Official organizational verification details. Editable administrative placeholders pending full corporate disclosure:
-              </p>
-              
-              <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem;">
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
-                  <span style="color: rgba(255, 255, 255, 0.6);">Operating Entity:</span>
-                  <span style="color: #FFFFFF; font-weight: 700;">PROSPIRA OFFICE</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
-                  <span style="color: rgba(255, 255, 255, 0.6);">Corporate Headquarters:</span>
-                  <span style="color: var(--color-accent);">[HQ Facility Placeholder — Verification Pending]</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
-                  <span style="color: rgba(255, 255, 255, 0.6);">Executive Profiles:</span>
-                  <span style="color: var(--color-accent);">[Leadership Directory — Available upon official release]</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
-                  <span style="color: rgba(255, 255, 255, 0.6);">Partner Certifications:</span>
-                  <span style="color: var(--color-accent);">[Cloud & Framework Certifications in Verification]</span>
-                </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-gold-light); color: var(--color-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700;">3</div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--color-ivory); margin-bottom: 4px;">Kiln-Dried Hardwood Internal Architecture</h4>
+                <p style="font-size: 0.875rem; color: var(--color-taupe-light);">Frames crafted exclusively from certified European beechwood and oak, joined with dowelled mortise-and-tenon structural joints.</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Closing CTA (Exact Reference: bg-secondary text-white) -->
-    <section class="section" style="padding-top: 0; background: var(--color-background);">
-      <div class="container">
-        <div class="cta-box">
-          <h2 style="font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 1.25rem;">
-            Let's Shape Your Next <br> Breakthrough.
-          </h2>
-          <p class="lead" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 2.25rem;">
-            Whether building from a blank slate or refactoring legacy infrastructure, let's engineer something that moves your business forward.
-          </p>
-          <a href="contact.html" class="btn btn-primary btn-lg">
-            Start a Conversation
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          <a href="services.html" class="btn btn-outline-gold">
+            Explore Customisation Options
           </a>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
+        <!-- Craftsmanship Media -->
+        <div class="service-media" style="aspect-ratio: 4 / 3.4;">
+          <img src="assets/images/editorial-craftsmanship.jpg" alt="Artisan Tailoring Emerald Velvet in Milanese Atelier">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       THE LUXE LIVING EXPERIENCE
+       Atelier Consultation, 3D Spatial Modeling, White-Glove Curation
+       ======================================================================== -->
+  <section class="section bg-obsidian">
+    <div class="container">
+      <div class="text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="eyebrow eyebrow-center">The Journey</span>
+        <h2 class="heading-xl">The Luxe Living Experience</h2>
+        <p class="body-lead" style="margin-top: 1rem;">
+          From your first conceptual inquiry to the moment our white-glove team places each sculpted creation, your experience is completely tailored.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div style="background-color: var(--color-obsidian-card); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-sm); padding: 36px; position: relative;">
+          <span style="font-family: var(--font-serif); font-size: 3rem; color: var(--color-gold); opacity: 0.4; line-height: 1; display: block; margin-bottom: 12px;">01</span>
+          <h3 class="heading-sm" style="color: var(--color-ivory); margin-bottom: 12px;">Private Consultation</h3>
+          <p style="font-size: 0.875rem; color: var(--color-taupe-light); line-height: 1.7;">
+            Connect with a dedicated private client advisor in our flagship gallery or via a digital studio session to define your aesthetic preferences and spatial requirements.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-obsidian-card); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-sm); padding: 36px; position: relative;">
+          <span style="font-family: var(--font-serif); font-size: 3rem; color: var(--color-gold); opacity: 0.4; line-height: 1; display: block; margin-bottom: 12px;">02</span>
+          <h3 class="heading-sm" style="color: var(--color-ivory); margin-bottom: 12px;">Bespoke Finish Curation</h3>
+          <p style="font-size: 0.875rem; color: var(--color-taupe-light); line-height: 1.7;">
+            Select from our extensive material archives including rare stone veining, hand-stitched emerald velvets, brushed brass patinas, and tailored dimensions.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-obsidian-card); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-sm); padding: 36px; position: relative;">
+          <span style="font-family: var(--font-serif); font-size: 3rem; color: var(--color-gold); opacity: 0.4; line-height: 1; display: block; margin-bottom: 12px;">03</span>
+          <h3 class="heading-sm" style="color: var(--color-ivory); margin-bottom: 12px;">Artisan Execution</h3>
+          <p style="font-size: 0.875rem; color: var(--color-taupe-light); line-height: 1.7;">
+            Each furniture piece is produced with meticulous attention to detail, rigorous quality control checkpoints, and individual artisan certification.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-obsidian-card); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-sm); padding: 36px; position: relative;">
+          <span style="font-family: var(--font-serif); font-size: 3rem; color: var(--color-gold); opacity: 0.4; line-height: 1; display: block; margin-bottom: 12px;">04</span>
+          <h3 class="heading-sm" style="color: var(--color-ivory); margin-bottom: 12px;">White-Glove Installation</h3>
+          <p style="font-size: 0.875rem; color: var(--color-taupe-light); line-height: 1.7;">
+            Delivered in climate-controlled transit with room-of-choice placement, assembly, full packaging removal, and ongoing maintenance guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SHOWROOM ATMOSPHERE SECTION (FEATURING UPLOADED REFERENCE IMAGE)
+       ======================================================================== -->
+  <section class="section bg-obsidian-soft">
+    <div class="container">
+      <div class="editorial-layout">
+        <div class="editorial-media">
+          <img src="assets/images/showroom-reference.jpg" alt="Luxe Living Flagship Showroom Exhibition" class="editorial-main-img">
+          <div class="editorial-floating-badge">
+            <p class="quote">“A sanctuary designed to inspire.”</p>
+            <span class="author">740 Madison Avenue Atelier</span>
+          </div>
+        </div>
+
+        <div class="editorial-content">
+          <span class="eyebrow">The Flagship Experience</span>
+          <h2 class="editorial-quote-headline">An Environment Built on Architectural Harmony</h2>
+          <p class="body-lead" style="margin-bottom: 1.5rem;">
+            Step into our gallery to experience the tactile poetry of our collection. Observe how light travels across polished stone, feel the weight of solid oak joinery, and sink into our signature velvet sectionals.
+          </p>
+          <p style="color: var(--color-taupe-light); line-height: 1.8; margin-bottom: 2.5rem;">
+            Our gallery is configured as a series of intimate residential vignettes, allowing you to envision how each curated silhouette will anchor your own home.
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-book-consultation" data-service="Showroom VIP Tour">
+              Book a Private Visit
+            </button>
+            <a href="contact.html" class="btn btn-outline-gold">
+              Contact Concierge
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GRAND CTA SECTION
+       ======================================================================== -->
+  <section class="section grand-cta-section">
+    <div class="container">
+      <div class="grand-cta-content">
+        <span class="eyebrow eyebrow-center">Your Vision Awaits</span>
+        <h2 class="grand-cta-title">Experience Luxe Living in Person.</h2>
+        <p class="body-lead" style="margin-bottom: 2.5rem;">
+          Allow our senior curators to guide your journey. Discover how our timeless furniture brings serenity, beauty, and comfort into every corner of your home.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="services.html" class="btn btn-primary">Discover Our Services</a>
+          <a href="contact.html" class="btn btn-outline-ivory">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GLOBAL FOOTER
+       ======================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="brand-link">
-            <img src="assets/images/logo.svg" alt="PROSPIRA OFFICE Logo" width="190" height="38">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Luxe Living">
+            <img src="assets/images/logo.svg" alt="Luxe Living Logo" width="200" height="40">
           </a>
-          <p>
-            A premium digital agency specializing in high-performance websites, applications, and future-forward digital products.
+          <p class="footer-brand-desc">
+            Luxe Living is an international luxury furniture house and interior atelier dedicated to the art of timeless, sophisticated, and comfortable living.
           </p>
         </div>
+
         <div>
-          <h4 class="footer-heading">Services</h4>
+          <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="services.html#web-development">Web Development</a></li>
-            <li><a href="services.html#web-applications">Web Applications</a></li>
-            <li><a href="services.html#mobile-applications">Mobile Applications</a></li>
-            <li><a href="services.html#game-development">Game Development</a></li>
-            <li><a href="services.html#ai-automation">AI Automation</a></li>
-            <li><a href="services.html#ui-ux-design">UI/UX Design</a></li>
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 class="footer-heading">Company</h4>
+          <h4 class="footer-col-title">Collections</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="work.html">Work & Portfolio</a></li>
-            <li><a href="process.html">Our Process</a></li>
-            <li><a href="about.html">About Prospira</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html#collections" class="footer-link">Living Room</a></li>
+            <li><a href="index.html#collections" class="footer-link">Dining Room</a></li>
+            <li><a href="index.html#collections" class="footer-link">Bedroom Suites</a></li>
+            <li><a href="index.html#collections" class="footer-link">Accent Seating</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 class="footer-heading">Inquiries & Office</h4>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Official Inquiries</div>
-              <a href="mailto:inquiries@prospiraoffice.com" style="color: #FFFFFF; text-decoration: none;">inquiries@prospiraoffice.com</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Phone (Placeholder)</div>
-              <span style="color: #FFFFFF;">+1 (800) 555-0199</span>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <div>
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.5);">Studio Location</div>
-              <span style="color: #FFFFFF;">Prospira Office HQ, Suite 400 (Editable)</span>
-            </div>
-          </div>
+          <h4 class="footer-col-title">Private Circle</h4>
+          <p style="font-size: 0.8125rem; color: var(--color-taupe-light); line-height: 1.6;">
+            Subscribe to receive private invitations to new collection previews, architectural lookbooks, and design events.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">Join</button>
+          </form>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <div>© 2026 PROSPIRA OFFICE. All rights reserved.</div>
-        <button class="back-to-top" aria-label="Scroll back to top">
-          Back to Top
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
-        </button>
+        <div>
+          &copy; <span id="currentYear">2026</span> Luxe Living Atelier Ltd. All rights reserved.
+        </div>
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="4" x2="12" y2="20"></line><circle cx="12" cy="12" r="8"></circle></svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Universal Shopping Cart Drawer -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Curated Bag</h3>
+      <button class="cart-close-btn" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-items-list"></div>
+      <div class="cart-empty-state" style="display: none;">
+        <p style="color: var(--color-taupe-light); text-align: center; padding: 2rem 0;">Your shopping bag is currently empty.</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row"><span>Subtotal</span><span class="cart-subtotal-val">$7,850</span></div>
+      <div class="cart-total-row"><span>Estimated Total</span><span class="cart-total-val text-gold">$7,850</span></div>
+      <button class="btn btn-primary cart-checkout-btn" style="width: 100%;">Proceed to Concierge Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Universal VIP Consultation Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalBookingTitle">
+    <div class="modal-dialog" style="max-width: 600px; padding: 40px;">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <span class="eyebrow">Private Client Services</span>
+      <h3 class="heading-md" id="modalBookingTitle" style="margin-bottom: 10px;">Reserve a VIP Consultation</h3>
+      <p style="color: var(--color-taupe-light); font-size: 0.875rem; margin-bottom: 24px;">Meet with a senior interior styling advisor in our Madison Avenue atelier or via virtual studio.</p>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label class="form-label" for="bookingName">Your Name</label>
+          <input type="text" id="bookingName" class="form-input" required placeholder="Lady Eleanor Vance">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="bookingEmail">Email Address</label>
+            <input type="email" id="bookingEmail" class="form-input" required placeholder="eleanor@estate.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookingPhone">Phone Number</label>
+            <input type="tel" id="bookingPhone" class="form-input" required placeholder="+1 (212) 555-0199">
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="bookingService">Service Desired</label>
+            <select id="bookingService" class="form-select">
+              <option value="Showroom Consultation">Flagship Showroom VIP Tour</option>
+              <option value="Custom Furniture">Bespoke Furniture Customisation</option>
+              <option value="Interior Styling">Interior Styling &amp; Spatial Flow</option>
+              <option value="Virtual Consultation">Virtual Design Studio Session</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookingDate">Preferred Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Helpers -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+  <a href="https://wa.me/18005893548?text=Hello%20Luxe%20Living%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20story." target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  </a>
+
+  <div class="toast-container" aria-live="polite"></div>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

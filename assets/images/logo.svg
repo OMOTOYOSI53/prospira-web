@@ -1,29 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 52" fill="none">
   <defs>
-    <linearGradient id="logoGradRef" x1="4" y1="42" x2="40" y2="8" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FF5D05" />
-      <stop offset="60%" stop-color="#FF7D2A" />
-      <stop offset="100%" stop-color="#F4D47C" />
+    <linearGradient id="logoGold" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9E7F47" />
+      <stop offset="45%" stop-color="#C5A46D" />
+      <stop offset="75%" stop-color="#ECD8B2" />
+      <stop offset="100%" stop-color="#C5A46D" />
     </linearGradient>
-    <filter id="logoGlowRef" x="-2" y="-2" width="50" height="50" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FF5D05" flood-opacity="0.35" />
-    </filter>
   </defs>
-
-  <!-- Abstract P Mark -->
-  <g transform="translate(2, 2)">
-    <path d="M8 38L8 10C8 8.89543 8.89543 8 10 8H15C16.1046 8 17 8.89543 17 10V38C17 39.1046 16.1046 40 15 40H10C8.89543 40 8 39.1046 8 38Z" fill="url(#logoGradRef)" filter="url(#logoGlowRef)" />
-    <path d="M15 8H26C31.5228 8 36 12.4772 36 18C36 23.5228 31.5228 28 26 28H15V21.5H25C26.933 21.5 28.5 19.933 28.5 18C28.5 16.067 26.933 14.5 25 14.5H15V8Z" fill="url(#logoGradRef)" />
-    <polygon points="18,10.5 26,10.5 23.5,14.5 15.5,14.5" fill="#FDF6E3" opacity="0.95" />
-    <circle cx="33.5" cy="10" r="2.2" fill="#F4D47C" />
-  </g>
-
-  <!-- Wordmark: PROSPIRA -->
-  <text x="54" y="27" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="2.2" fill="currentColor">PROSPIRA</text>
   
-  <!-- Sub-wordmark: OFFICE -->
-  <text x="55" y="40" font-family="'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="5" fill="#F4D47C">OFFICE</text>
-
-  <!-- Dot separator -->
-  <circle cx="126" cy="37" r="1.8" fill="#FF5D05" />
+  <!-- Logo Mark -->
+  <g transform="translate(4, 4)">
+    <path d="M14 2H28L38 12V26L28 36H14L4 26V12L14 2Z" stroke="url(#logoGold)" stroke-width="1.4" stroke-opacity="0.85" fill="#111111" />
+    <path d="M15 11V27H27" stroke="url(#logoGold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M19 15V23H29" stroke="url(#logoGold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="21" cy="19" r="1.2" fill="url(#logoGold)" />
+  </g>
+  
+  <!-- Brand Typography -->
+  <g transform="translate(56, 12)">
+    <!-- LUXE LIVING Wordmark -->
+    <text x="0" y="18" fill="#F4EFE6" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="20" font-weight="600" letter-spacing="4">LUXE LIVING</text>
+    <!-- Subtitle -->
+    <text x="1" y="29" fill="#C5A46D" font-family="'Manrope', 'Inter', sans-serif" font-size="7.5" font-weight="500" letter-spacing="3.2" opacity="0.9">FURNITURE &amp; ATELIER</text>
+  </g>
 </svg>

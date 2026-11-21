@@ -1,17 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
   <defs>
-    <linearGradient id="markGradRef" x1="8" y1="40" x2="40" y2="8" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FF5D05" />
-      <stop offset="60%" stop-color="#FF7D2A" />
-      <stop offset="100%" stop-color="#F4D47C" />
+    <linearGradient id="markGold" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9E7F47" />
+      <stop offset="40%" stop-color="#C5A46D" />
+      <stop offset="70%" stop-color="#EADBBA" />
+      <stop offset="100%" stop-color="#C5A46D" />
     </linearGradient>
-    <filter id="markGlowRef" x="-2" y="-2" width="52" height="52" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#FF5D05" flood-opacity="0.45" />
-    </filter>
   </defs>
+  <!-- Architectural Octagonal / Faceted Diamond Frame -->
+  <path d="M16 4H32L44 16V32L32 44H16L4 32V16L16 4Z" stroke="url(#markGold)" stroke-width="1.5" stroke-opacity="0.8" fill="#111111" />
   
-  <path d="M10 37L10 11C10 9.89543 10.8954 9 12 9H17C18.1046 9 19 9.89543 19 11V37C19 38.1046 18.1046 39 17 39H12C10.8954 39 10 38.1046 10 37Z" fill="url(#markGradRef)" filter="url(#markGlowRef)" />
-  <path d="M17 9H28C34.0751 9 39 13.9249 39 20C39 26.0751 34.0751 31 28 31H17V23.5H27.5C29.433 23.5 31 21.933 31 20C31 18.067 29.433 16.5 27.5 16.5H17V9Z" fill="url(#markGradRef)" />
-  <polygon points="20,12 28,12 25,16.5 17,16.5" fill="#FDF6E3" opacity="0.9" />
-  <circle cx="36" cy="12" r="2.5" fill="#F4D47C" />
+  <!-- Interlocking L & L Monogram with Serif Terminals -->
+  <path d="M17 14V33H31" stroke="url(#markGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M22 19V28H34" stroke="url(#markGold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9" />
+  
+  <!-- Subtle center jewel accent -->
+  <circle cx="24" cy="24" r="1.5" fill="url(#markGold)" />
 </svg>
